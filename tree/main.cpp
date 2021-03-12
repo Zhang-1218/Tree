@@ -1,5 +1,6 @@
 #include"charg_blanace.h"
 #include"treeDepth.h"
+#include"TrieTree.h"
 
 void test()
 {
@@ -27,8 +28,37 @@ void test()
 
 }
 
+void trieTreeTest()
+{
+	cout << "Hello world!" << endl;
+    TrieTree trie;
+    string str = "li";
+    cout << trie.search(str) << endl;
+    trie.insert(str);
+    cout << trie.search(str) << endl;
+    trie.deleteWord(str);
+    cout << trie.search(str) << endl;
+    trie.insert(str);
+    cout << trie.search(str) << endl;
+
+    trie.insert(str);
+    cout << trie.search(str) << endl;
+
+    trie.deleteWord("li");
+    cout << trie.search(str) << endl;
+    trie.deleteWord("li");
+    cout << trie.search(str) << endl;
+    trie.insert("lia");
+    trie.insert("lic");
+    trie.insert("liab");
+    trie.insert("liad");
+    trie.deleteWord("lia");
+    cout << trie.search("lia") << endl;
+}
+
 int main()
 {
-	test();
+	trieTreeTest();
+	//test();
 	return 0;
 }
