@@ -58,7 +58,7 @@ void trieTreeTest()
 
 int main()
 {
-	trieTreeTest();
-	//test();
+	//trieTreeTest();
+	test();
 	return 0;
 }
